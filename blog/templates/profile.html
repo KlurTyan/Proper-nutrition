@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block StaticFile %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+<script src="{% static 'js/profile.js' %}"></script>
+{% endblock %}
+
+{% block title %}Profile{% endblock %}
+
+
+{% block content %}
+<div class="buttons">
+    <a href="{% url 'blog:blog' %}">
+        <button>Блоги</button>
+    </a>
+    <a href=''>
+        <button>Форум</button>
+    </a>
+    <button onclick=logoutFunc()>Выйти</button>
+</div>
+<div class="user">
+
+    <div class="avatarka">
+        <img src="{% static 'img/account.png' %}">
+    </div>
+
+    <div class="info-1">
+        <p id="name"></p>
+        <p id="date_registration">Дата регистрации</p>
+        <p id="email"></p>
+    </div>
+
+</div>
+
+<div class="lust">
+    <div>Последние темы</div>
+    <div>Последние ответы</div>
+</div>
+
+<div class="center">
+
+    <div class="left">
+        <div class="names">
+            <p class="stolb">Forum</p>
+            <p class="stolb">ответы</p>
+            <p class="stolb">добавлено</p>
+        </div>
+        <div class="anketa">
+            <div class="string">
+                <p class="info">Aprimo WordPress Theme</p>
+                <p class="info">11</p>
+                <p class="info">11 сек. назад</p>
+            </div>
+            <div class="string">
+                <p class="info">Aprimo WordPress Theme</p>
+                <p class="info">11</p>
+                <p class="info">11 сек. назад</p>
+            </div>
+            <div class="string">
+                <p class="info">Aprimo WordPress Theme</p>
+                <p class="info">11</p>
+                <p class="info">11 сек. назад</p>
+            </div>
+            <div class="string">
+                <p class="info">Aprimo WordPress Theme</p>
+                <p class="info">11</p>
+                <p class="info">11 сек. назад</p>
+            </div>
+            <div class="string">
+                <p class="info">Aprimo WordPress Theme</p>
+                <p class="info">11</p>
+                <p class="info">11 сек. назад</p>
+            </div>
+            <div class="string">
+                <p class="info">Aprimo WordPress Theme</p>
+                <p class="info">11</p>
+                <p class="info">11 сек. назад</p>
+            </div>
+            <div class="string">
+                <p class="info">Aprimo WordPress Theme</p>
+                <p class="info">11</p>
+                <p class="info">11 сек. назад</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

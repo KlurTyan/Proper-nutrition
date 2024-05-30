@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registration{% endblock %}
+{% block StaticFile %}
+<link rel="stylesheet" href="{% static 'css/registra.css' %}">
+<script src="{% static 'js/auth.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="background">
+    <img src="{% static 'img/background.png' %}">
+</div>
+<div class="registr">
+    <p class="title">Регистрация</p>
+    <form action="" method="post">
+        <input placeholder="Введите ваш логин" id="login">
+        <input placeholder=" Введите вашу почту" id='email'>
+        <input placeholder="Введите ваш пароль" id="password">
+        {% csrf_token %}
+    </form>
+
+    <button onclick="registrationFunc()">Зарегистрироваться</button>
+</div>
+{% endblock %}

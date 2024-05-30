@@ -1,0 +1,90 @@
+body {
+    background-color: black;
+    font-family: "Ysabeau Infant", sans-serif;
+    color: white;
+    background-image: url(../img/background.png);
+}
+
+.left {
+    height: auto;
+    width: 700px;
+    background-color: #2B2949;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.anketa {
+    background-color: #302F61;
+}
+
+.string {
+    display: flex;
+    justify-content: space-around;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    gap: 20px;
+}
+
+.names {
+    display: flex;
+    justify-content: space-around;
+}
+
+.avatarka {
+    width: 200px;
+    height: 200px;
+    background-color: #2B2949;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.lust div {
+    width: 200px;
+    height: 50px;
+    background-color: #2B2949;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.lust {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding-left: 90%;
+}
+
+.buttons button {
+    width: 150px;
+    height: 50px;
+    background-color: #2B2949;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #39384b;
+}

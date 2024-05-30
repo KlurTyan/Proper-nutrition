@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+{% block StaticFile %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<script src="{% static 'js/auth.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="background">
+    <img src="{% static 'img/background.png' %}">
+</div>
+<div class="registr">
+    <p class="title">Login</p>
+    <form action="" method="post">
+        <input id="login" placeholder="Введите ваш логин">
+        <input id="password" placeholder="Введите ваш пароль">
+        {% csrf_token %}
+    </form>
+
+    <button onclick="loginFunc()">Авторизоваться</button>
+</div>
+{% endblock %}

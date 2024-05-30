@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap"
+        rel="stylesheet">
+    {% block StaticFile %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/card.js' %}"></script>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="menu" id="menu">
+
+        <div class="name">GoodFod</div>
+        <a href="{% url 'blog:profile' %}">
+            <div class="account"><img src="{% static 'img/account.png' %}"></div>
+        </a>
+        <div class="search"><img src="{% static 'img/search.png' %}"></div>
+
+    </div>
+    </div>
+    <div class="container-1">
+        <img class="bg" src="{% static 'img/background.png' %}">
+        <div class="text">Правильное питание,<br> здоровое тело!</div>
+
+        <div class="hui">
+            <div class="clock">
+                <img class="bg-clock" src="{% static 'img/health-clock.png' %}">
+                <div class="hour">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="{% static 'js/clocks.js' %}"></script>
+
+        <div class="imfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse vero veritatis quae?
+        </div>
+    </div>
+    <img class="str-fruit" src="{% static 'img/string-fruit.png' %}">
+    <div class="menu-2">
+        <p class="txt-menu">Блоги</p>
+        <a href="forum.html">
+            <div class="menu-right">
+                <p class="txt-menu">Форум</p>
+                <img class="forum-logo" src="{% static 'img/forum-logo.png' %}">
+            </div>
+        </a>
+    </div>
+    <div class="container-2">
+        <img class="bg" src="{% static 'img/background.png' %}">
+        <div class="blogs-input">
+            <div class="blogs">
+                <div class="height">
+                    <a class="blog-test" href="https://toitumine.ee/ru/kak-pravilno-pitatsya"><img class="blog-bg"
+                            src="{% static 'img/blogs-1.png' %}">Правильное питание в<br /> течении дня</a>
+                    <a class="blog-test"
+                        href="https://ru.yourketo.diet/?utm_source=google&utm_medium=cpc&utm_campaign=YourKeto_Central_Asia_RU&utm_creative=KD&gad_source=1&gclid=CjwKCAjw3NyxBhBmEiwAyofDYYMyCn8KiyH2VoTiMcjep-jbY8Dr1BacBWWPNijdg-e2hZHTcgMfNRoClbIQAvD_BwE"><img
+                            class="blog-bg" src="{% static 'img/blogs-2.png' %}">Правильное питание <br /> для
+                        похудения</a>
+                </div>
+                <br />
+                <div class="height">
+                    <a class="blog-test" href="https://menunedeli.ru/2013/03/menyu-pravilnogo-pitaniya-na-nedelyu/"><img
+                            class="blog-bg" src="{% static 'img/blogs-3.png' %}">Правильное питание в<br /> меню</a>
+                    <a class="blog-test" href="http://policlinic5.ru/?q=node/395"><img class="blog-bg"
+                            src="{% static 'img/blogs-4.png' %}">Неправильное питание</a>
+                </div>
+                <button class="more">Ещё</button>
+            </div>
+            <div class="forum">
+                <p class="input-hg">Последние темы</p>
+                <div class="input"></div>
+                <div class="input"></div>
+                <div class="input"></div>
+                <div class="input"></div>
+                <p class="input-hg">Последние ответы</p>
+                <div class="input"></div>
+                <div class="input"></div>
+                <div class="input"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <img class="str-fruit" src="{% static 'img/string-fruit.png' %}">
+    <footer>
+        <img class="foot-bg" src="{% static 'img/footer-bg.png' %}">
+        <p class="footer">Возникли проблемы?<br />Пишите нам на почту</p>
+        <input class="input" placeholder="Ваш email">
+    </footer>
+    <script src="{% static 'js/base.js' %}"></script>
+    {% endblock %}
+</body>
+
+</html>
